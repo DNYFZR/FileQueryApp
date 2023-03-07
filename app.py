@@ -61,7 +61,7 @@ def app(DB_PATH=':memory:'):
      
             try:
                 DATA = USER_RESULT.groupby(X_LABEL)[Y_LABEL].agg(AGG_TYPE).round(1)
-            except TypeError:
+            except (TypeError, ValueError) as errors:
                 st.markdown('<h4 align="center"><b>SELECTION CANNOT BE PLOTTED</b></h4>', unsafe_allow_html=True)
             else:
                 getattr(st, f'{CHART_TYPE}_chart')(data=DATA, height=500)

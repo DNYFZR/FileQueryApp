@@ -1,0 +1,13 @@
+[server]
+runOnSave = true
+port = 8501
+maxUploadSize = 2048
+maxMessageSize = 600
+
+[theme]
+primaryColor="#C2C6C3"
+backgroundColor="#252424"
+secondaryBackgroundColor="#025719"
+textColor="#C2C6C3"
+font="sans serif"
+base="dark"
